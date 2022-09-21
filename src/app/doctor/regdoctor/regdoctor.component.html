@@ -1,0 +1,29 @@
+<div>
+    <form [formGroup]="doctorGroup" (submit)="addDoctor()">
+        <div>
+            <label>Name</label>
+            <input type="text" #dName (input)="dName.value" formControlName="dName" />
+            {{dName.value}}
+            <span *ngIf="
+            doctorGroup.controls.dName.errors && doctorGroup.controls.dName.dirty
+          ">
+                Name is requried
+            </span>
+        </div>
+        <div>
+            <label>Phone</label>
+            <input type="text" formControlName="phone" />
+            <span *ngIf="doctorGroup.controls.phone.errors?.requried && doctorGroup.controls.phone.dirty">
+                phone is requried
+            </span>
+            <span *ngIf="
+            doctorGroup.controls.phone.errors?.pattern && doctorGroup.controls.phone.dirty
+          ">
+                invalid phone number
+            </span>
+        </div>
+        <div>
+            <input type="submit" value="Add Doctor" />
+        </div>
+    </form>
+</div>

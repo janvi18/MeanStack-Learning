@@ -1,0 +1,38 @@
+<div>
+    <ul *ngFor="let s of students">
+        <li>{{s.name}}</li>
+        <li>{{s.age}}</li>
+        <li>{{s.marks}}</li>
+
+    </ul>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Marks</th>
+        </tr>
+
+        <tr *ngFor="let s of students">
+            <div *ngIf="s.age>=18">
+                <td>
+                    {{s.name}}
+                </td>
+                <td>
+                    {{s.age}}
+                </td>
+                <td>
+                    {{s.marks}}
+                </td>
+              
+            </div>
+
+        </tr>
+    </table>
+
+</div>
+
+<html>
+    <head>
+        
+    </head>
+</html>

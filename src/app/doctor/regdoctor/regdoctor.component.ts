@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { AppService } from 'src/app/app.service';
 
 @Component({
@@ -10,9 +10,9 @@ import { AppService } from 'src/app/app.service';
 export class RegdoctorComponent implements OnInit {
 
   constructor(private service: AppService) { }
-  doctorGroup = new FormGroup({
-    dName: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    phone: new FormControl('', [Validators.required, Validators.pattern('[0-9]{10}')]),
+  doctorGroup = new UntypedFormGroup({
+    dName: new UntypedFormControl('', [Validators.required, Validators.minLength(3)]),
+    phone: new UntypedFormControl('', [Validators.required, Validators.pattern('[0-9]{10}')]),
   })
 
   addDoctor() {

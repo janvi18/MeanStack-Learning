@@ -26,6 +26,13 @@ import { ToastModule } from 'primeng/toast';
 import { TableModule } from 'primeng/table';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PipeComponent } from './pipe/pipe.component';
+import {ChartModule} from 'primeng/chart';
+import { TranformPipe } from './tranform.pipe';
+import { ConvertPipe } from './convert.pipe';
+import { EmployeechartComponent } from './employeechart/employeechart.component';
+import { CurrencyconPipe } from './currencycon.pipe';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +53,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     ViewtutComponent,
     RegdoctorComponent,
     ListdoctorComponent,
-    EditdoctorComponent
+    EditdoctorComponent,
+    PipeComponent,
+    TranformPipe,
+    ConvertPipe,
+    EmployeechartComponent,
+    CurrencyconPipe,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +68,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ToastrModule.forRoot(), // ToastrModule added,
     BrowserAnimationsModule,
     ToastModule,
-    TableModule
+    TableModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

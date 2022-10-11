@@ -7,6 +7,8 @@ import { DashboardComponent } from './ecom/dashboard/dashboard.component';
 import { NavbarComponent } from './ecom/navbar/navbar.component';
 import { ProductComponent } from './ecom/product/product.component';
 import { ProductlistComponent } from './ecom/productlist/productlist.component';
+import { EmployeechartComponent } from './employeechart/employeechart.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 const routes: Routes = [
   { path: "dashboard", component: DashboardComponent },
@@ -16,7 +18,9 @@ const routes: Routes = [
   { path: 'regdoctor', component: ListdoctorComponent },
   { path: 'listdoctor', component: ListdoctorComponent },
   { path: 'editdoctor/:id', component: EditdoctorComponent },
-  { path: 'logindoctor', component: ListdoctorComponent }
+  { path: 'logindoctor', component: ListdoctorComponent },
+  {path:'chart',component:EmployeechartComponent},
+  {path:'pipe',component:PipeComponent},
 ];
 
 @NgModule({

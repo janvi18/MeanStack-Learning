@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { AppService } from 'src/app/app.service';
 
@@ -17,9 +17,9 @@ export class EditdoctorComponent implements OnInit {
 
   id: number = 0;
   doctor: any;
-  doctorGroup = new FormGroup({
-    dName: new FormControl(''),
-    phone: new FormControl(''),
+  doctorGroup = new UntypedFormGroup({
+    dName: new UntypedFormControl(''),
+    phone: new UntypedFormControl(''),
   })
 
   ngOnInit(): void {
